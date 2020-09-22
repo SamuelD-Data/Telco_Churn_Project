@@ -6,6 +6,11 @@ from sklearn.model_selection import train_test_split
 def prepare_telco(telco_raw):
     # dropping duplicate rows
     telco_raw.drop_duplicates(inplace=True)
+
+    # creating new column that tells whether the customer makes automatic or manual payments
+    # 0 = manual | 1 = automatic
+    payment_type_cols = [1, 2, 3, 4]
+    telco_raw['is_automatic_payment'] = telco_raw.payment_type_id.replace(payment_type_cols, [0,0,1,1])
     
     # converting no phone service to No to reduce column to binary values
     # phone service column will still tell us if they dont have phone service
@@ -42,6 +47,16 @@ def prepare_telco(telco_raw):
     
     # creating tenure_years column that shows how many years client has been with us
     telco_raw['tenure_years'] = round(telco_raw.monthly_tenure / 12, 1)
+
+   # reordering columns so that churn appears last
+   # this makes it easier to locate when plotting features
+    telco_raw = telco_raw[['customer_id', 'female', 'senior_citizen', 'partner', 'dependents',
+       'monthly_tenure', 'phone_service', 'multiple_lines',
+       'internet_service_type_id', 'online_security', 'online_backup',
+       'device_protection', 'tech_support', 'streaming_tv', 'streaming_movies',
+       'contract_type_id', 'paperless_billing', 'payment_type_id','is_automatic_payment',
+       'monthly_charges', 'total_charges',
+       'tenure_years','churn']]
     
     # splitting data into train, test and validate telco_raws
     train_validate, test = train_test_split(telco_raw, test_size = .20, random_state = 123)
