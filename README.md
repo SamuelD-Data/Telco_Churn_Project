@@ -1,14 +1,14 @@
-### Identifying the Drivers of Churn at Telco
+### Predicting Churn at Telco
 
 ## Background
 
-We are making efforts to reduce customer churn because it is more cost efficient to keep our current customers than to attract new ones.
+Telco is making efforts to reduce customer churn because it is more cost efficient to keep current customers than to attract new ones.
 
 ## Goals
 
-My goal for this project is to create a model that will acurrately predict customer churn using the customer data provided. I will also be identifying the primary drivers of customer churn.
+The goal for this project is to create a model that will acurrately predict customer churn using the customer data provided.
 
-I will deliver the following: 
+I will also deliver the following: 
 
 - classification_project.ipynb
     - A Jupyter Notebook showing the process and analysis by which the drivers of customer churn are documented.
@@ -142,22 +142,22 @@ Run the jupyter notebook.
 
 ## Key Findings and Takeaways
 
-- Exploration uncovered that some of the strongest drivers of churn include:
+# Conclusion
+I'll now summarize what I learned from exploration and modeling, make recommendations, discuss what to do next, and summarize the model.
+***
+- Exploration uncovered that some the following features are related to churn:
     - Dependents
     - Partners
     - Automatic vs Manual Payments
     - Monthly Charges
     
-- All of this information suggest that our most reliable customers are price sensitive, people with families who greatly value the convenience of automatic payments.
-
 - Recommendations to reduce churn:
     - Lower monthly charges because our customers appear to be price sensitive
     - Offer promotions that encourage clients to add partners and dependents to account. Once signed up, switching multiple people to a competitor becomes a barrier to exit and increases tenure.
-    - Invest in marketing that promotes the use of automatic payments because our clients will leave us for our competitors if they don't feel our services meet their convenience needs.
+    - Invest in marketing that promotes the use of automatic payments because clients will leave Telco for a competitor if they don't feel Telco's services meet their convenience needs.
 
-- We created a model that identifies these variables and uses logistic regression to make predictions about churn.
-    - The model maintained an accuracy of roughly 74% on both in and out of sample data
-    - We expect it to perform with same accuracy on more unseen data in the future
-    - If our churn rate increases in the future, the model will become less accurate as it's recall metric is low so it tends to predict incorrectly when a customer churns.
+- Created a model that uses these variables to make predictions about churn.
+    - The model maintained an accuracy of roughly 74% on both in and out-of-sample data
+    - I expect it to perform with similar accuracy on more unseen data in the future
     
-- In the near future I would like to use what we learned from this project to build a new, more refined model that will improve it's ability to predict when a customer is churning, when they actually are (ie. improved recall) as this is our current model's largest area of opportunity.
+- In the near future I would like to use what I learned from this project to build a new, more refined model that will improve it's ability to predict when a customer is churning, when they actually are (ie. improved recall) as this is the current model's largest area of opportunity.
