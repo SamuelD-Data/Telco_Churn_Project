@@ -54,7 +54,7 @@ def prepare_telco(telco_raw):
        'monthly_tenure', 'phone_service', 'multiple_lines',
        'internet_service_type_id', 'online_security', 'online_backup',
        'device_protection', 'tech_support', 'streaming_tv', 'streaming_movies',
-       'contract_type_id', 'paperless_billing', 'payment_type_id','is_automatic_payment',
+       'contract_type_id', 'paperless_billing','is_automatic_payment',
        'monthly_charges', 'total_charges',
        'tenure_years','churn']]
     
