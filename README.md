@@ -1,4 +1,4 @@
-### Predicting Churn at Telco
+# Predicting Churn at Telco
 
 ## Background
 
@@ -6,29 +6,13 @@ Telco is making efforts to reduce customer churn because it is more cost efficie
 
 ## Goals
 
-The goal for this project is to create a model that will acurrately predict customer churn using the customer data provided.
+My goals for this project are as follows
+- Create a model that will acurrately predict customer churn using the customer data provided
+- Deliver a presentation that summarizes this project
 
-I will also deliver the following: 
+A link to the presentation slides can be found below.
 
-- classification_project.ipynb
-    - A Jupyter Notebook showing the process and analysis by which the drivers of customer churn are documented.
-    
-- README.md
-    - A Markdown file containing the project description with goals, a data dictionary, project planning, instructions for recreaction of the project and its findings, key findings and takeaways. 
-    
-- predictions.csv
-    - A CSV file containing customer IDs, probability of churn, and prediction of churn (1 = Churn, 0 = not_churn)
-
-- acquire.py
-    - A Python file containing a function to acquire the customer data
-    
-- prepare.py
-    - A Python file containing functions that prepare the customer data to be worked with
-
-- model.py
-    - A Python file containing the functions needed to recreate the model 
-    
-- A walkthrough-style presentation with a high-level overview of the project
+https://docs.google.com/presentation/d/1fI64dzhV6jX33lD-tAv9IEc0MOXx1_ilWL54OKl9aRQ/edit?usp=sharing
 
 ## Data Dictionary
 
@@ -139,8 +123,6 @@ expectations for model performance on future unseen data
 Install acquire.py, prepare.py into your working directory. (You must have access to Codeup data science database)
 
 Run the jupyter notebook.
-
-## Key Findings and Takeaways
 
 # Conclusion
 I'll now summarize what I learned from exploration and modeling, make recommendations, discuss what to do next, and summarize the model.
