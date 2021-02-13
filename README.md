@@ -1,4 +1,4 @@
-# Predicting Churn at Telco
+# Telco Churn Project
 
 ## Background
 
@@ -7,12 +7,9 @@ Telco is making efforts to reduce customer churn because it is more cost efficie
 ## Goals
 
 My goals for this project are as follows
+- Identify the drivers of churn
 - Create a model that will acurrately predict customer churn using the customer data provided
-- Deliver a presentation that summarizes this project
 
-A link to the presentation slides can be found below.
-
-https://docs.google.com/presentation/d/1fI64dzhV6jX33lD-tAv9IEc0MOXx1_ilWL54OKl9aRQ/edit?usp=sharing
 
 ## Data Dictionary
 
@@ -111,12 +108,13 @@ fit to train and evaluate on train
 select all models that outperform the baseline
 select best model from validate and apply to test dataset
 
-4) conclusion
+4) Conclusion
 
 summarize findings from project:
-drivers, recommendations, model performance
-next steps
-expectations for model performance on future unseen data
+- drivers
+- recommendations
+- model performance
+- next steps
 
 ## How to Reproduce
 
@@ -124,22 +122,29 @@ Install acquire.py, prepare.py into your working directory. (You must have acces
 
 Run the jupyter notebook.
 
+
 # Conclusion
-I'll now summarize what I learned from exploration and modeling, make recommendations, discuss what to do next, and summarize the model.
+
+I'll now summarize what I learned from exploration and modeling, make recommendations, summarize my best model's performance, steps going forward.
 ***
+
 - Exploration uncovered that some the following features are related to churn:
     - Dependents
     - Partners
     - Automatic vs Manual Payments
     - Monthly Charges
     
+    
 - Recommendations to reduce churn:
     - Lower monthly charges because our customers appear to be price sensitive
     - Offer promotions that encourage clients to add partners and dependents to account. Once signed up, switching multiple people to a competitor becomes a barrier to exit and increases tenure.
     - Invest in marketing that promotes the use of automatic payments because clients will leave Telco for a competitor if they don't feel Telco's services meet their convenience needs.
 
-- Created a model that uses these variables to make predictions about churn.
-    - The model maintained an accuracy of roughly 74% on both in and out-of-sample data
-    - I expect it to perform with similar accuracy on more unseen data in the future
-    
+
+- Created a random forest model that make predictions about churn.
+    - The model's performance can be summarized as follows 
+        - Accuracy of roughly 75% on both in-sample (train) and out-of-sample data (validate, test)
+        - Recall score of 31% on in-sample (train) and ~37% out-of-sample data (validate, test)
+   
+   
 - In the near future I would like to use what I learned from this project to build a new, more refined model that will improve it's ability to predict when a customer is churning, when they actually are (ie. improved recall) as this is the current model's largest area of opportunity.
