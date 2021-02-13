@@ -126,7 +126,7 @@ Run the jupyter notebook.
 # Conclusion
 
 I'll now summarize what I learned from exploration and modeling, make recommendations, summarize my best model's performance, steps going forward.
-***
+
 
 - Exploration uncovered that some the following features are related to churn:
     - Dependents
